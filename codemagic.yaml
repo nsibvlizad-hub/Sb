@@ -1,0 +1,15 @@
+workflows:
+  android-debug:
+    name: Android Unsigned Debug APK
+    environment:
+      flutter: stable
+      java: 1.8   # Java 8 seçiliyor
+    scripts:
+      - name: Get dependencies
+        script: flutter pub get
+
+      - name: Build Debug APK (Unsigned)
+        script: flutter build apk --debug
+
+    artifacts:
+      - build/app/outputs/flutter-apk/app-debug.apk
