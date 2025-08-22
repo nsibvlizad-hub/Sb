@@ -1,0 +1,12 @@
+workflows:
+  android-app:
+    name: Android Java11 Build
+    environment:
+      java: 11
+      android:
+        gradle: 7.0
+    scripts:
+      - name: Build Android Debug
+        script: ./gradlew assembleDebug
+    artifacts:
+      - build/app/outputs/**/*.apk
