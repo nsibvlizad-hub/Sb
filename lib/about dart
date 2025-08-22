@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+
+class AboutPage extends StatelessWidget {
+  const AboutPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("About phone")),
+      body: ListView(
+        children: const [
+          ListTile(title: Text("Android version"), subtitle: Text("16")),
+          ListTile(title: Text("One UI version"), subtitle: Text("8.0")),
+          ListTile(title: Text("Knox version"), subtitle: Text("4.0")),
+          ListTile(title: Text("Model name"), subtitle: Text("Galaxy A12 Clone")),
+          ListTile(title: Text("Build number"), subtitle: Text("Build2025.1")),
+        ],
+      ),
+    );
+  }
+}
